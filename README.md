@@ -1,12 +1,14 @@
-IPFS stands for InterPlanetary File System, and it is a way of storing and sharing data in a decentralized network. It uses a data structure called a Merkle DAG (Directed Acyclic Graph) and a distributed network layer to store files. It also includes commands like Import, Name, Find, and Fetch to store and retrieve files efficiently. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. This makes the network resilient to attacks and outages, so that files can still be accessed even if some of the nodes are compromised.
-
 # IPFS
 
 ## Synopsis
 
+IPFS stands for InterPlanetary File System, and it is a way of storing and sharing data in a decentralized network. It uses a data structure called a Merkle DAG (Directed Acyclic Graph) and a distributed network layer to store files. It also includes commands like Import, Name, Find, and Fetch to store and retrieve files efficiently. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. This makes the network resilient to attacks and outages, so that files can still be accessed even if some of the nodes are compromised.
+
+## Details
+
 This markdown blog is a reference and summary of how IPFS works, broken down into logical concepts and components.
 
-IPFS stands for InterPlanetary File System, and it is a distributed, peer-to-peer protocol designed to store and share data in a decentralized network. This eliminates the need for a centralized server, which is vulnerable to attacks and outages. Instead, data is stored in a distributed manner on nodes all over the world, and is accessible by its cryptographic hash.
+IPFS is a distributed, peer-to-peer protocol designed to store and share data in a decentralized network. This eliminates the need for a centralized server, which is vulnerable to attacks and outages. Instead, data is stored in a distributed manner on nodes all over the world, and is accessible by its cryptographic hash.
 
 At the core of IPFS is a data structure known as a Merkle DAG (Directed Acyclic Graph). This structure enables IPFS to store all kinds of data, and makes IPFS versatile in its uses. It also enables IPFS to detect any changes in data, as any modification will create a new cryptographic hash, so that all nodes have up-to-date versions of a file. This enables content addressing, which allows users to simply provide the cryptographic hash to access the file, instead of needing to know the exact location.
 
