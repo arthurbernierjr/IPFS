@@ -1,5 +1,7 @@
 # IPFS
 
+***Raw Notes***
+
 ## Synopsis
 
 IPFS stands for InterPlanetary File System, and it is a way of storing and sharing data in a decentralized network. It uses a data structure called a Merkle DAG (Directed Acyclic Graph) and a distributed network layer to store files. It also includes commands like Import, Name, Find, and Fetch to store and retrieve files efficiently. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. This makes the network resilient to attacks and outages, so that files can still be accessed even if some of the nodes are compromised.
