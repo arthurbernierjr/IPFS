@@ -27,6 +27,8 @@ These stages can be broken down into Importing, Naming, Finding, and Fetching. T
 ![IPFS](https://user-images.githubusercontent.com/38284764/206791995-5f9f3729-b414-4002-ad2b-1e4c85ea4118.png)
 
 # Import
+***You have files, IPFS wants you to add those files, this is how we do it***
+
 - Chunk the file into pieces
 - take the pieces and compile them into files and directories
 - Then code them in the IPLD data structure
@@ -48,6 +50,9 @@ A Merkle DAG (Directed Acyclic Graph) is a type of data structure used in distri
 IPLD (InterPlanetary Linked Data) is a data model and set of protocols for linking and sharing data across distributed systems. It is based on the Merkle DAG data structure and is used to create a unified data structure for distributed systems. IPLD is used in conjunction with IPFS to enable data to be linked and shared across multiple systems, allowing for more efficient data storage and retrieval.
 
 # Name
+
+***Decentralized web technology lets users access data without relying on central authorities. Content addressing, which uses cryptographic hashing to give data a unique and secure identifier, makes it easy to trust data shared on the decentralized web and to rely on peers for content. Hashes act as links, not just names, freeing users from reliance on domain location. This is essential for creating a secure, trustworthy web.***
+
 - use a content id (cid) to refer to the pieces of data
 - use paths to describe extra meta data about the cid or data we are addressing
 - Use ipns for creating mutable names
@@ -65,6 +70,9 @@ IPNS (InterPlanetary Name System) is a distributed naming system used in IPFS to
 
 
 # Find
+***You want something on IPFS? We have to find it. But remember we don't access things by location like the centralized web. 
+On the decentralized web, content can be requested using its content address (hash). This address acts like a link, and allows us to get the exact file we need from any peer who has it, even if the original publisher is not online.*** 
+
 - Use content routing via the Kademlia DHT
 
 ## Routing 
@@ -78,7 +86,12 @@ Kademlia is a distributed hash table (DHT) used in IPFS to store and retrieve co
 
 
 # Fetch
+
+***Now that we found it wee need to Fetch it. For that we use Bitswap which is a message-based protocol that can be used to quickly exchange data between peers.***
+
  - Use Bitswap
 
 ## Bitswap
-Bitswap is a protocol used in IPFS to exchange data between peers. It is based on the Kademlia distributed hash table (DHT) and is used to ensure that content is stored and retrieved efficiently. Bitswap is used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data.
+Bitswap is a protocol used in IPFS to exchange data between peers. It is designed to be simple and efficient, with the ability to balance aspects such as throughput, latency, fairness, and memory usage. When a wantlist is received, the server responds with either information about the block or the block itself. When blocks are received, a Cancel notification is sent to peers that have requested the data.
+
+
