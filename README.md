@@ -78,13 +78,13 @@ On the decentralized web, content can be requested using its content address (ha
 - Use content routing via the Kademlia DHT
 
 ### Routing 
-Routing in IPFS is the process of finding and retrieving content from the distributed network. It is based on the Kademlia distributed hash table (DHT) and is used to locate and retrieve content from the distributed network. Routing is used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data.
+Routing in IPFS is the process of finding content on the distributed network. We know what content we want but we don't yet know who has the content. We need to figure who has the content, so then it can eventually retrieved by us. Routing is used to ensure that content is stored and retrieved efficiently.
 
 ### DHT
-DHT (Distributed Hash Table) is a data structure used in distributed systems to store and retrieve data. It is used in IPFS to store and retrieve content from the distributed network. DHT is used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data.
+DHT (Distributed Hash Table) is a data structure used in distributed systems to store and retrieve data. It is used in IPFS to store and retrieve content from the distributed network. The DHT is what actually would know which peers have what content. IPFS uses a distributed hash table (DHT) as a content routing system to help users find the data they are looking for. The DHT acts as a directory where peers store and find data, allowing users to quickly map what they are looking for to the peer that is storing the content.
 
 ### Kademlia
-Kademlia is a distributed hash table (DHT) used in IPFS to store and retrieve content from the distributed network. It is based on the XOR metric and is used to ensure that content is stored and retrieved efficiently. Kademlia is used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data.
+The Kademlia algorithm has been around for a while, and is used to build a distributed hash table on top of three system parameters, an address space as a way that all of the network peers can be uniquely identified, a metric to order peers in the address space, and a projection to calculate where the data should be stored. Having this address space and a peer ordering metric allows us to search the network as though it was a sorted list i.e [1,2,3,4,5].
 
 
 # Fetch
