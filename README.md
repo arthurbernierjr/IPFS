@@ -1,16 +1,12 @@
-# IPFS
+# How IPFS Works?
+### A logical breakdown of the components and concepts of IPFS
 
+## What is IPFS?
 
-***Raw Notes***
+IPFS stands for InterPlanetary File System, and it provides us a way of storing and sharing data in a decentralized network. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. You don't access files in IPFS by the location like you do in the centralized web, `i.e superman.com/upupandaway.jpg`,
+instead you notify IPFS what piece of content you desire to retrieve by its unique hash, the network then finds that content somewhere on the network and provides it to you. 
 
-## Synopsis
-
-IPFS stands for InterPlanetary File System, and it is a way of storing and sharing data in a decentralized network. It uses a data structure called a Merkle DAG (Directed Acyclic Graph) and a distributed network layer to store files. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. This makes the network resilient to attacks and outages, so that files can still be accessed even if some of the nodes are compromised.
-
-## Details
-
-
-This markdown blog is a reference and summary of how IPFS works, broken down into logical concepts and components.
+## Why IPFS?
 
 IPFS is a distributed, peer-to-peer protocol designed to store and share data in a decentralized network. This eliminates the need for a centralized server, which is vulnerable to attacks and outages. Instead, data is stored in a distributed manner on nodes all over the world, and is accessible by its cryptographic hash.
 
@@ -18,15 +14,26 @@ At the core of IPFS is a data structure known as a Merkle DAG (Directed Acyclic 
 
 Another key component of IPFS is its distributed network layer. This is made up of the network of nodes, which all store some or all of the data from the Merkle DAG. The data is distributed and stored in a highly-reliable manner, ensuring that it is always available.
 
-Finally, IPFS also includes some protocol logic, which is responsible for routing messages, as well as creating and verifying content addresses.
+IPFS can be used for a variety of purposes, including hosting websites, sharing files, and building decentralized applications. Some of the main benefits of using IPFS include:
+
+1. Improved security: IPFS uses cryptographic hashes to ensure the integrity and security of data stored on the network. This means that data cannot be tampered with or altered once it has been added to the network.
+
+1. Decentralization: IPFS is a decentralized network, meaning that it is not controlled by any single entity. This makes it more resistant to censorship and other forms of control.
+
+1. Faster loading times: Because IPFS is a distributed system, data is stored on multiple nodes across the network. This means that users can access the data more quickly, since it is likely to be stored on a node that is geographically closer to them.
+
+1. Improved scalability: As the IPFS network grows, it becomes more scalable and able to handle a larger amount of data and traffic. This means that it can support more users and applications without experiencing performance issues.
+
+Overall, IPFS provides a number of benefits that make it a useful tool for storing and sharing data in a decentralized and secure manner.
 
 
+# Understanding IPFS
 
 ![IPFS](https://user-images.githubusercontent.com/38284764/206791995-5f9f3729-b414-4002-ad2b-1e4c85ea4118.png)
 
 To understand how IPFS works its important to understand the individual stages that a file would go through in IPFS.
 
-These stages can be broken down into Importing, Naming, Finding, and Fetching. The Import step happens when we first add content to the network, Naming happens when we create a means to link to the content but not with a file location, but instead using content based addressing, Finding is when we locate content contained in IPFS, and Fetch is used to retrieve content that we have found. IPFS works by assigning each file a unique "hash" that identifies it. This hash is then stored on the network, allowing each node to locate and retrieve the file. Files are broken down into chunks and distributed among the nodes, so that they can be retrieved even if some of the nodes are offline. In addition, the system is designed to be resilient to attacks and failures, allowing users to access files even if some of the nodes are compromised.
+These stages can be broken down into ***Importing, Naming, Finding, and Fetching***. The _Import_ step happens when we first add content to the network, _Naming_ happens when we create a means to link to the content but not with a file location, but instead using ***content based addressing***, _Finding_ is when we locate content contained in IPFS, and _Fetch_ is used to retrieve content that we have found. IPFS works by assigning each file a unique "hash" that identifies it. This hash is then stored on the network, allowing each node to locate and retrieve the file. Files are broken down into chunks and distributed among the nodes, so that they can be retrieved even if some of the nodes are offline. In addition, the system is designed to be resilient to attacks and failures, allowing users to access files even if some of the nodes are compromised.
 
 # Import
 ***You have files, IPFS wants you to add those files, this is how we do it***
@@ -55,9 +62,9 @@ IPLD (InterPlanetary Linked Data) is a data model and set of protocols for linki
 
 ***Decentralized web technology lets users access data without relying on central authorities. Content addressing, which uses cryptographic hashing to give data a unique and secure identifier, makes it easy to trust data shared on the decentralized web and to rely on peers for content. Hashes act as links, not just names, freeing users from reliance on domain location. This is essential for creating a secure, trustworthy web.***
 
-- use a content id (cid) to refer to the pieces of data
-- use paths to describe extra meta data about the cid or data we are addressing
-- Use ipns for creating mutable names
+- Use a content id (cid) to refer to the pieces of data
+- Use paths to describe extra metadata about the cid or data we are addressing
+- Use IPNS for creating mutable names
 
 ### CID
 CID (Content Identifier) is a unique identifier used in IPFS to identify content. It is a hash of the content's data and is used to locate and retrieve the content from the distributed network. CID is used to ensure the integrity of the content and to ensure that the content is not tampered with.
@@ -68,7 +75,7 @@ A Path in IPFS is a string of characters that is used to locate and retrieve con
 
 ### IPNS
 
-IPNS (InterPlanetary Name System) is a distributed naming system used in IPFS to locate and retrieve content from the distributed network. It is based on the Merkle DAG data structure and is used to create a unified data structure for distributed systems. IPNS is used to create a permanent link to content, allowing for more efficient storage and retrieval of data.
+IPNS (InterPlanetary Name System) is a distributed naming system used in IPFS to locate and retrieve content from the distributed network. IPNS is used to create a permanent link to content, allowing for more efficient storage and retrieval of data.
 
 
 # Find
