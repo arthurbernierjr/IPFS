@@ -5,9 +5,10 @@
 
 ## Synopsis
 
-IPFS stands for InterPlanetary File System, and it is a way of storing and sharing data in a decentralized network. It uses a data structure called a Merkle DAG (Directed Acyclic Graph) and a distributed network layer to store files. It also includes commands like Import, Name, Find, and Fetch to store and retrieve files efficiently. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. This makes the network resilient to attacks and outages, so that files can still be accessed even if some of the nodes are compromised.
+IPFS stands for InterPlanetary File System, and it is a way of storing and sharing data in a decentralized network. It uses a data structure called a Merkle DAG (Directed Acyclic Graph) and a distributed network layer to store files. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. This makes the network resilient to attacks and outages, so that files can still be accessed even if some of the nodes are compromised.
 
 ## Details
+
 
 This markdown blog is a reference and summary of how IPFS works, broken down into logical concepts and components.
 
@@ -21,8 +22,9 @@ Finally, IPFS also includes some protocol logic, which is responsible for routin
 
 To understand how IPFS works its important to understand the individual stages that a file would go through in IPFS.
 
-These stages can be broken down into Importing, Naming, Finding, and Fetching. Import, Name, Find, and Fetch are commands used in IPFS to store and retrieve content from the distributed network. Import is used to add content to the network, Name is used to create a permanent link to content, Find is used to locate content, and Fetch is used to retrieve content. These commands are used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data. IPFS works by assigning each file a unique "hash" that identifies it. This hash is then stored on the network, allowing each node to locate and retrieve the file. Files are broken down into chunks and distributed among the nodes, so that they can be retrieved even if some of the nodes are offline. In addition, the system is designed to be resilient to attacks and failures, allowing users to access files even if some of the nodes are compromised.
+These stages can be broken down into Importing, Naming, Finding, and Fetching. The Import step happens when we first add content to the network, Name is used to create a permanent link to content, Find is used to locate content, and Fetch is used to retrieve content.IPFS works by assigning each file a unique "hash" that identifies it. This hash is then stored on the network, allowing each node to locate and retrieve the file. Files are broken down into chunks and distributed among the nodes, so that they can be retrieved even if some of the nodes are offline. In addition, the system is designed to be resilient to attacks and failures, allowing users to access files even if some of the nodes are compromised.
 
+![IPFS](https://user-images.githubusercontent.com/38284764/206791995-5f9f3729-b414-4002-ad2b-1e4c85ea4118.png)
 
 # Import
 - Chunk the file into pieces
@@ -63,7 +65,7 @@ IPNS (InterPlanetary Name System) is a distributed naming system used in IPFS to
 
 
 # Find
-- Use content routing via the Kidenlia DHT
+- Use content routing via the Kademlia DHT
 
 ## Routing 
 Routing in IPFS is the process of finding and retrieving content from the distributed network. It is based on the Kademlia distributed hash table (DHT) and is used to locate and retrieve content from the distributed network. Routing is used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data.
@@ -71,7 +73,7 @@ Routing in IPFS is the process of finding and retrieving content from the distri
 ## DHT
 DHT (Distributed Hash Table) is a data structure used in distributed systems to store and retrieve data. It is used in IPFS to store and retrieve content from the distributed network. DHT is used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data.
 
-## Kademilia
+## Kademlia
 Kademlia is a distributed hash table (DHT) used in IPFS to store and retrieve content from the distributed network. It is based on the XOR metric and is used to ensure that content is stored and retrieved efficiently. Kademlia is used to ensure that content is stored and retrieved efficiently, allowing for more efficient storage and retrieval of data.
 
 
