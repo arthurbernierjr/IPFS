@@ -101,7 +101,7 @@ Having this address space and a peer ordering metric allows us to search the net
 
 # Fetch
 
-***Now that we found it wee need to Fetch it. For that we use Bitswap which is a message-based protocol that can be used to quickly exchange data between peers.***
+***Now that we found it we need to Fetch it. For that we use Bitswap which is a message-based protocol that can be used to quickly exchange data between peers.***
 
  - Use Bitswap
 
