@@ -20,11 +20,13 @@ Another key component of IPFS is its distributed network layer. This is made up 
 
 Finally, IPFS also includes some protocol logic, which is responsible for routing messages, as well as creating and verifying content addresses.
 
-To understand how IPFS works its important to understand the individual stages that a file would go through in IPFS.
 
-These stages can be broken down into Importing, Naming, Finding, and Fetching. The Import step happens when we first add content to the network, Name is used to create a permanent link to content, Find is used to locate content, and Fetch is used to retrieve content.IPFS works by assigning each file a unique "hash" that identifies it. This hash is then stored on the network, allowing each node to locate and retrieve the file. Files are broken down into chunks and distributed among the nodes, so that they can be retrieved even if some of the nodes are offline. In addition, the system is designed to be resilient to attacks and failures, allowing users to access files even if some of the nodes are compromised.
 
 ![IPFS](https://user-images.githubusercontent.com/38284764/206791995-5f9f3729-b414-4002-ad2b-1e4c85ea4118.png)
+
+To understand how IPFS works its important to understand the individual stages that a file would go through in IPFS.
+
+These stages can be broken down into Importing, Naming, Finding, and Fetching. The Import step happens when we first add content to the network, Naming happens when we create a means to link to the content but not with a file location, but instead using content based addressing, Finding is when we locate content contained in IPFS, and Fetch is used to retrieve content that we have found. IPFS works by assigning each file a unique "hash" that identifies it. This hash is then stored on the network, allowing each node to locate and retrieve the file. Files are broken down into chunks and distributed among the nodes, so that they can be retrieved even if some of the nodes are offline. In addition, the system is designed to be resilient to attacks and failures, allowing users to access files even if some of the nodes are compromised.
 
 # Import
 ***You have files, IPFS wants you to add those files, this is how we do it***
@@ -93,5 +95,9 @@ Kademlia is a distributed hash table (DHT) used in IPFS to store and retrieve co
 
 ### Bitswap
 Bitswap is a protocol used in IPFS to exchange data between peers. It is designed to be simple and efficient, with the ability to balance aspects such as throughput, latency, fairness, and memory usage. When a wantlist is received, the server responds with either information about the block or the block itself. When blocks are received, a Cancel notification is sent to peers that have requested the data.
+
+
+# Conclusion
+Theres so much to learn about the features and components of IPFS, we hope this has been an informative introduction, and we hope your journey is only just getting started. 
 
 
