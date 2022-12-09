@@ -91,7 +91,12 @@ Routing in IPFS is the process of finding content on the distributed network. We
 DHT (Distributed Hash Table) is a data structure used in distributed systems to store and retrieve data. It is used in IPFS to store and retrieve content from the distributed network. The DHT is what actually would know which peers have what content. IPFS uses a distributed hash table (DHT) as a content routing system to help users find the data they are looking for. The DHT acts as a directory where peers store and find data, allowing users to quickly map what they are looking for to the peer that is storing the content.
 
 ### Kademlia
-The Kademlia algorithm has been around for a while, and is used to build a distributed hash table on top of three system parameters, an address space as a way that all of the network peers can be uniquely identified, a metric to order peers in the address space, and a projection to calculate where the data should be stored. Having this address space and a peer ordering metric allows us to search the network as though it was a sorted list i.e [1,2,3,4,5].
+The Kademlia algorithm has been around for a while, and is used to build a distributed hash table on top of three system parameters: 
+1. An address space as a way that all of the network peers can be uniquely identified
+1. A metric to order peers in the address space
+1. A projection to calculate where the data should be stored. 
+ 
+Having this address space and a peer ordering metric allows us to search the network as though it was a sorted list i.e [1,2,3,4,5].
 
 
 # Fetch
