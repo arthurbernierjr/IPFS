@@ -29,7 +29,7 @@ Overall, IPFS provides a number of benefits that make it a useful tool for stori
 
 # Understanding IPFS
 
-![IPFS](https://user-images.githubusercontent.com/38284764/206791995-5f9f3729-b414-4002-ad2b-1e4c85ea4118.png)
+![IPFS](https://user-images.githubusercontent.com/38284764/206810067-61c626a2-dded-4ee4-bb19-f4b595a000d6.png)
 
 To understand how IPFS works its important to understand the individual stages that a file would go through in IPFS.
 
