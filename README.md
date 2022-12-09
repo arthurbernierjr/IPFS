@@ -3,7 +3,7 @@
 
 ## What is IPFS?
 
-IPFS stands for InterPlanetary File System, and it provides us a way of storing and sharing data in a decentralized network. When a file is added to the network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. You don't access files in IPFS by the location like you do in the centralized web, `i.e superman.com/upupandaway.jpg`,
+IPFS stands for InterPlanetary File System, and it provides us a way of storing and sharing data in a decentralized manner. When a file is added to the IPFS network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. You don't access files in IPFS by the location like you do in the centralized web, `i.e superman.com/upupandaway.jpg`,
 instead you notify IPFS what piece of content you desire to retrieve by its unique hash, then IPFS finds that content somewhere on the network and provides it to you. 
 
 ## Why IPFS?
@@ -33,22 +33,23 @@ Overall, IPFS provides a number of benefits that make it a useful tool for stori
 
 To understand how IPFS works its important to understand the individual stages that a file would go through in IPFS.
 
-These stages can be broken down into ***Importing, Naming, Finding, and Fetching***. The _Import_ step happens when we first add content to the network, _Naming_ happens when we create a means to link to the content but not with a file location, but instead using ***content based addressing***, _Finding_ is when we locate content contained in IPFS, and _Fetch_ is used to retrieve content that we have found. IPFS works by assigning each file a unique "hash" that identifies it. This hash is then stored on the network, allowing each node to locate and retrieve the file. Files are broken down into chunks and distributed among the nodes, so that they can be retrieved even if some of the nodes are offline. In addition, the system is designed to be resilient to attacks and failures, allowing users to access files even if some of the nodes are compromised.
+These stages can be broken down into ***Importing, Naming, Finding, and Fetching***. The _Import_ step happens when we first add content to the network, _Naming_ happens when we create a means to link to the content but not with a file location, but instead using ***content based addressing***, _Finding_ is when we locate content contained in IPFS, and _Fetch_ is used to retrieve content that we have found. 
 
 # Import
 ***You have files, IPFS wants you to add those files, this is how we do it***
 
+Steps:
 - Chunk the file into pieces
-- take the pieces and compile them into files and directories
+- Take the pieces and compile them into files and directories
 - Then code them in the IPLD data structure
 
 ### Chunking
 
-The first thing we do in order to import a file with IPFS is we use chunking to take a file and break it down into tiny pieces. This allows for faster storage and retrieval of data and better security and reliability as well as the ability to `seek` through a file since the file is chunked into smaller pieces. 
+The first thing we do in order to import a file with IPFS is chunking. We use chunking to take a file and break it down into smaller pieces. This allows for faster storage and retrieval of data.
 
 ### UnixFS
 
-Now that we have chunked the file we still need to have a way to create a contiguous file out of the pieces. So we get to utilize a Data Structure similar to a Merkle Tree called a Merkle DAG. A Merkle Tree is a data structure used in cryptography and computer science to verify the integrity of data. It is composed of digital hashes that link data blocks together in a secure way. By comparing a root hash with the hash of the data set, users can verify the integrity of the data without needing to check the whole data set. UnixFS is a data structure created by IPFS that lets people store and access unstructured data in a distributed and decentralized way. It is designed to store data of any type and format, and also stores associated metadata. UnixFS's structure is slightly different than Merkle Tree because trees can't have two edges point to the same thing but a graph of course can. 
+Now that we have chunked the file we still need to have a way to create a contiguous file out of the pieces. So we get to utilize a Data Structure similar to a Merkle Tree called a Merkle DAG. A Merkle Tree is a data structure used in cryptography and computer science to verify the integrity of data. It is composed of digital hashes that link data blocks together in a secure way. By comparing a root hash with the hash of the data set, users can verify the integrity of the data without needing to check the whole data set. UnixFS is a data structure created by IPFS that lets people store and access unstructured data in a distributed and decentralized way. It is designed to store data of any type and format, and also stores associated metadata. UnixFS's structure is slightly different than Merkle Tree because trees can't have two edges point to the same thing. If you are not fammiliar with Graphs, endges are essentially the lines or connections and nodes are the things being connected.
 
 ### Merkle DAG
 
@@ -62,6 +63,7 @@ IPLD (InterPlanetary Linked Data) is a data model and set of protocols for linki
 
 ***Decentralized web technology lets users access data without relying on central authorities. Content addressing, which uses cryptographic hashing to give data a unique and secure identifier, makes it easy to trust data shared on the decentralized web and to rely on peers for content. Hashes act as links, not just names, freeing users from reliance on domain location. This is essential for creating a secure, trustworthy web.***
 
+Steps:
 - Use a content id (cid) to refer to the pieces of data
 - Use paths to describe extra metadata about the cid or data we are addressing
 - Use IPNS for creating mutable names
@@ -82,6 +84,7 @@ IPNS (InterPlanetary Name System) is a distributed naming system used in IPFS to
 ***You want something on IPFS? We have to find it. But remember we don't access things by location like the centralized web. 
 On the decentralized web, content can be requested using its content address (hash). This address acts like a link, and allows us to get the exact file we need from any peer who has it, even if the original publisher is not online.*** 
 
+Steps:
 - Use content routing via the Kademlia DHT
 
 ### Routing 
@@ -103,14 +106,15 @@ Having this address space and a peer ordering metric allows us to search the net
 
 ***Now that we found it we need to Fetch it. For that we use Bitswap which is a message-based protocol that can be used to quickly exchange data between peers.***
 
- - Use Bitswap
+Steps:
+ - Use Bitswap to retrieve data
 
 ### Bitswap
 Bitswap is a protocol used in IPFS to exchange data between peers. It is designed to be simple and efficient, with the ability to balance aspects such as throughput, latency, fairness, and memory usage. When a wantlist is received, the server responds with either information about the block or the block itself. When blocks are received, a Cancel notification is sent to peers that have requested the data.
 
 
 # Conclusion
-Theres so much to learn about the features and components of IPFS, we hope this has been an informative introduction, and we hope your journey is only just getting started. 
+There's so much to learn about the features and components of IPFS, we hope this has been an informative introduction, and we hope your journey is only just getting started. 
 
 ## Review Questions
 
@@ -118,7 +122,7 @@ Theres so much to learn about the features and components of IPFS, we hope this 
 
 **❓ How would you describe content based addressing and how is it different from the way things work in the centralized web?**
 
-**❓ In your own words what is the purpose of a Distributed Hash Table (DHT) in IPFS? (Import)**
+**❓ In your own words what is the purpose of a Distributed Hash Table (DHT) in IPFS?**
 
 
 
