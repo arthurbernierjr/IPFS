@@ -107,4 +107,11 @@ Bitswap is a protocol used in IPFS to exchange data between peers. It is designe
 # Conclusion
 Theres so much to learn about the features and components of IPFS, we hope this has been an informative introduction, and we hope your journey is only just getting started. 
 
+## Review Questions
+
+**❓ In your own words what happens when you add a file to IPFS? (Import)**
+**❓ How would you describe content based addressing and how is it different from the way things work in the centralized web?**
+**❓ In your own words what is the purpose of a Distributed Hash Table (DHT) in IPFS? (Import)**
+
+
 
