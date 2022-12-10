@@ -4,7 +4,7 @@
 ## What is IPFS?
 
 IPFS stands for InterPlanetary File System, and it provides us a way of storing and sharing data in a decentralized manner. When a file is added to the IPFS network, it is given a unique "hash" that identifies it, and it is broken down into chunks and distributed among the nodes. You don't access files in IPFS by the location like you do in the centralized web, `i.e superman.com/upupandaway.jpg`,
-instead you notify IPFS what piece of content you desire to retrieve by its unique hash, then IPFS finds that content somewhere on the network and provides it to you. 
+instead you notify IPFS which piece of content you desire to retrieve by using its unique hash, then IPFS uses that hash to locate the content somewhere on the network and provide it to you. 
 
 ## Why IPFS?
 
