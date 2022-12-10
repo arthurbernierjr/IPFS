@@ -99,7 +99,7 @@ Steps:
 Routing in IPFS is the process of finding content on the distributed network. We know what content we want but we don't yet know who has the content. We need to figure out who has the content, so that it can eventually be retrieved by us. Routing is used to ensure that content is stored and retrieved efficiently.
 
 ### DHT
-DHT (Distributed Hash Table) is a data structure used in distributed systems to store and retrieve data. It is used in IPFS to store and retrieve content from the distributed network. The DHT is what actually would know which peers have what content. IPFS uses a distributed hash table (DHT) as a content routing system to help users find the data they are looking for. The DHT acts as a directory where peers store and find data, allowing users to quickly map what they are looking for to the peer that is storing the content.
+DHT (Distributed Hash Table) is a data structure used in distributed systems to store and retrieve data. It is used in IPFS to store and retrieve content from the distributed network. The DHT is what actually would know which peers have what content. IPFS uses a DHT as a content routing system to help users find the data they are looking for. The DHT acts as a directory where peers store and find data, allowing users to quickly map what they are looking for to the peer that is storing the content.
 
 ### Kademlia
 The Kademlia algorithm has been around for a while, and is used to build a distributed hash table on top of three system parameters: 
@@ -126,7 +126,7 @@ There's so much to learn about the features and components of IPFS, we hope this
 
 ## Review Questions
 
-**❓ In your own words what happens when you add a file to IPFS? (Import)**
+**❓ In your own words what happens when you add a file to IPFS?**
 
 **❓ How would you describe content based addressing and how is it different from the way things work in the centralized web?**
 
