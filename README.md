@@ -12,7 +12,7 @@ IPFS is a distributed, peer-to-peer protocol designed to store and share data in
 
 At the core of IPFS is a data structure known as a Merkle DAG (Directed Acyclic Graph). This structure enables IPFS to store all kinds of data, and makes IPFS versatile in its uses. It also enables IPFS to detect any changes in data, as any modification will create a new cryptographic hash, so that all nodes have up-to-date versions of a file. This enables content addressing, which allows users to simply provide the cryptographic hash to access the file, instead of needing to know the exact location.
 
-Another key component of IPFS is its distributed network layer. This is made up of the network of nodes, which all store some or all of the data from the Merkle DAG. The data is distributed and stored in a highly-reliable manner, ensuring that it is always available.
+Another key component of IPFS is its distributed network layer. This is made up of the network of nodes, where each node stores some or all of the data in the network.
 
 IPFS can be used for a variety of purposes, including hosting websites, sharing files, and building decentralized applications. Some of the main benefits of using IPFS include:
 
