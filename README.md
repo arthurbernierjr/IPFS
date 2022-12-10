@@ -51,7 +51,7 @@ The first thing we do in order to import a file with IPFS is chunking. We use ch
 
 Now that we have chunked the file we still need to have a way to create a contiguous file out of the pieces. So we get to utilize a Data Structure similar to a Merkle Tree called a Merkle DAG. A Merkle Tree is a data structure used in cryptography and computer science to verify the integrity of data. It is composed of digital hashes that link data blocks together in a secure way. By comparing a root hash with the hash of the data set, users can verify the integrity of the data without needing to check the whole data set. 
 
-UnixFS is a data structure created by IPFS that lets people store and access unstructured data in a distributed and decentralized way. It is designed to store data of any type and format, and also stores associated metadata. UnixFS's structure is slightly different than Merkle Tree because trees can't have two edges point to the same thing. If you are not fammiliar with Graphs, endges are essentially the lines or connections and nodes are the things being connected.
+UnixFS is a data structure created by IPFS that lets people store and access unstructured data in a distributed and decentralized way. It is designed to store data of any type and format, and also stores associated metadata. UnixFS's structure is slightly different than Merkle Tree because trees can't have two edges point to the same thing. If you are not familiar with Graphs, edges are essentially the lines or connections between nodes, and the nodes are the things being connected.
 
 ![MerkleDag](https://user-images.githubusercontent.com/38284764/206813371-207be774-9512-4027-9ba0-8a99a767f78a.png)
 
