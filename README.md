@@ -55,9 +55,9 @@ UnixFS is a data structure created by IPFS that lets people store and access uns
 
 ![MerkleDag](https://user-images.githubusercontent.com/38284764/206813371-207be774-9512-4027-9ba0-8a99a767f78a.png)
 
-In the above example you can see `Main Directory` is a Node and there is an edge that connects to `Project directory`. In this example also you can see the `Project directory` and `Todo directory` both point to the `Todo.js` file. 
+In the above example you can see `Main Directory` is a Node and there is an edge that connects this node to the `Project directory`. You can also you can see that the `Project directory` and the `Todo directory` both point to the `Todo.js` file. 
 
-In this example this would be because both directories contain identical files. IPFS is efficient enough to know that two files are identical and as a result this example just has both directories reference the same file. In location based systems you would just end up with two redundant identical files.
+This is because both directories contain identical files. IPFS is efficient enough to know that two files in two different directories are identical. As a result of this we end up with both `Project directory` and `Todo directory` pointing edges at the same node, `Todo.js` instead of there being a redundant copy. In location based systems you would just end up with two redundant identical files.
 
 ### Merkle DAG
 
